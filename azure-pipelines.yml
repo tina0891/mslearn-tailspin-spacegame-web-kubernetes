@@ -44,14 +44,14 @@ stages:
       artifact: manifests
 
 - stage: 'Deploy'
-  displayName: 'Deploy the container'
+  displayName: 'Deploy the containers'
   dependsOn: Build
   jobs:
   - deployment: Deploy
     displayName: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-      environment: 'spike.default'
+      environment: 'spike'
     variables:
     - group: Release
     strategy:
