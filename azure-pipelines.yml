@@ -51,7 +51,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-      environment: 'spike'
+      environment: 'spike.default'
     variables:
     - group: Release
     strategy:
